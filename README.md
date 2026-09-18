@@ -48,7 +48,7 @@ The local port is published only on loopback. Local PostgreSQL uses the private 
 2. In Aiven Console, deploy an application from the repo and scan **compose.aiven.yaml**.
 3. Choose a dedicated PostgreSQL service and check the integration maps its connection string to `DATABASE_URL`. PostgreSQL 16 is the reference version; the scanner does not enforce the Compose image tag, so review the version in Console.
 4. Add the required variables below before startup. Publish only HTTP port **8080**.
-5. Start with **one Runtime replica, one Python worker and 1 GiB RAM** for a small demo. A PostgreSQL `startup-4` plan is a conservative starting point consistent with the 10-connection pool. These are estimates pending live validation, not tested minimums or production sizing. Review free/internal plans and current prices before provisioning.
+5. Start with **one Runtime replica, one Python worker and 1 GiB RAM** for a small demo. A PostgreSQL `startup-4` plan is a conservative starting point consistent with the 10-connection pool. These sizes passed the small live demo recorded in VALIDATION.md; they are not tested minimums or production sizing. Review free/internal plans and current prices before provisioning.
 6. Wait for startup schema setup, then open the generated HTTPS URL and sign in. `/health/ready` checks the database; `/health/live` checks the application process.
 
 For MCP/API deployment, use the root Dockerfile and an `application_service_credential` integration exposing the PostgreSQL connection string as `DATABASE_URL`. The API does not deploy Compose files directly.

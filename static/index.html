@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Draft & review · LangGraph starter</title><link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script></head>
 <body>
-<header><a class="brand" href="/">◈ <span>Draft & review</span></a><div class="header-right"><span class="tag">LangGraph starter</span><button id="logout" class="quiet" hidden>Sign out</button></div></header>
+<header><a class="brand" href="/">◈ <span class="brand-copy"><strong>LangGraph starter</strong><small>Draft &amp; review</small></span></a><div class="header-right"><button id="logout" class="quiet" hidden>Sign out</button></div></header>
 <main>
 <section id="login-view" class="login-card" hidden><span class="eyebrow">A WORKFLOW WITH A HUMAN IN THE LOOP</span><h1>A first draft.<br>A second pair of eyes.</h1><p>Create a draft, give feedback, and pick up where you left off.</p><form id="login-form"><label for="password">Demo password</label><input id="password" type="password" autocomplete="current-password" required maxlength="1024"><button type="submit">Open workspace <span>→</span></button></form><p id="login-error" role="alert" class="error"></p><small>This demo uses a shared workspace. Everyone with access can view its saved runs.</small></section>
 <section id="workspace" hidden><div class="intro"><div><span class="eyebrow">YOUR WORKFLOW WORKSPACE</span><h1>Good work takes a second look.</h1><p>Draft it. Review it. Make it yours.</p></div><span id="mode" class="mode"></span></div><div id="notice" role="status" class="notice" hidden></div>
