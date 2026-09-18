@@ -1,0 +1,13 @@
+services:
+  langgraph:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - langgraph-postgres
+    environment:
+      DATABASE_URL: postgresql://USER:PASSWORD@langgraph-postgres:5432/defaultdb
+      MODEL_MODE: mock
+      # Add APP_PASSWORD, SESSION_SECRET, APP_API_KEY and PG_CA_CERT_BASE64 in Runtime.
+  langgraph-postgres:
+    image: postgres:16
