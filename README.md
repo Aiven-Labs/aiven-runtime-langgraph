@@ -124,3 +124,8 @@ Tests use an in-memory checkpointer and run index; production has no in-memory f
 - [PostgreSQL checkpointing](https://docs.langchain.com/oss/python/langgraph/add-memory)
 - [Pause and resume with interrupts](https://docs.langchain.com/oss/python/langgraph/interrupts)
 - [Aiven Runtime Compose manifests](https://aiven.io/docs/products/runtime/manifest-files/compose-files)
+
+## License
+
+The template code in this repository is licensed under the [MIT License](LICENSE).
+Third-party applications, dependencies and container images retain their own licenses.
